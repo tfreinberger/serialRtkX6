@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/TextAppearance.MaterialComponents.Body2"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1. Get NMEA Messages via Inputstream."/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editBaudRate"
+                android:text="38400"
+                android:layout_marginTop="8dp"
+                android:inputType="number"
+                android:layout_weight="3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:gravity="center_vertical"
+                android:textColor="@android:color/holo_red_dark"
+                style="@style/TextAppearance.MaterialComponents.Subtitle2"
+                android:text="Default Baudrate is 38400. Use 115200 if you alredy run the MaxGo RTK app! "/>
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/buttonPowerOn"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/holo_green_dark"
+            android:text="Power on &amp; Read Nmea Messages" />
+
+        <Button
+            android:id="@+id/buttonPowerOff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/holo_orange_dark"
+            android:text="Power Off" />
+
+
+
+        <TextView
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.MaterialComponents.Body2"
+            android:text="2. Connect to correction service."/>
+
+        <TextView
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.MaterialComponents.Body2"
+            android:text="3. Receive correction data."/>
+
+        <TextView
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.MaterialComponents.Body2"
+            android:text="4. Send correction data via Outputstream."/>
+
+        <TextView
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.MaterialComponents.Body2"
+            android:text="4. Receive corrected NMEA Messages."/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="NMEA Messages"/>
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/listNmea"/>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
